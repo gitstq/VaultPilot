@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "vaultpilot"
+version = "0.1.0"
+description = "轻量级终端 Markdown 知识库管理引擎"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "VaultPilot Team"},
+]
+keywords = ["markdown", "knowledge-base", "cli", "note-taking", "wiki"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+    "Environment :: Console",
+]
+
+[project.scripts]
+vault = "vaultpilot.cli:main"
+
+[project.optional-dependencies]
+rich = ["rich>=13.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["vaultpilot*"]
